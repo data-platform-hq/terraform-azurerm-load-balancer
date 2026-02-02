@@ -11,14 +11,14 @@ This module is creating Azure Load Balancer.
 
 | Name | Version |
 |------|---------|
-| <a name="requirement_terraform"></a> [terraform](#requirement\_terraform) | >= 1.0.0 |
-| <a name="requirement_azurerm"></a> [azurerm](#requirement\_azurerm) | >= 4.0.1 |
+| <a name="requirement_terraform"></a> [terraform](#requirement\_terraform) | >= 1.3.0 |
+| <a name="requirement_azurerm"></a> [azurerm](#requirement\_azurerm) | ~> 4.0 |
 
 ## Providers
 
 | Name | Version |
 |------|---------|
-| <a name="provider_azurerm"></a> [azurerm](#provider\_azurerm) | >= 4.0.1 |
+| <a name="provider_azurerm"></a> [azurerm](#provider\_azurerm) | ~> 4.0 |
 
 ## Modules
 
@@ -44,7 +44,7 @@ No modules.
 | <a name="input_backend_pool_vnet_id"></a> [backend\_pool\_vnet\_id](#input\_backend\_pool\_vnet\_id) | The ID of the Virtual Network within which the Backend Address Pool should exist. | `string` | `null` | no |
 | <a name="input_diagnostic_settings_name"></a> [diagnostic\_settings\_name](#input\_diagnostic\_settings\_name) | Specifies the name of the Diagnostic Setting | `string` | `null` | no |
 | <a name="input_enable_diagnostic_setting"></a> [enable\_diagnostic\_setting](#input\_enable\_diagnostic\_setting) | Enable diagnostic setting. var.analytics\_workspace\_id must be provided | `bool` | `false` | no |
-| <a name="input_lb_frontend_ip_configurations"></a> [lb\_frontend\_ip\_configurations](#input\_lb\_frontend\_ip\_configurations) | List of object with configuration parameters to create Load Balancer frontend ip configurations and rules | <pre>list(object({<br>    name                 = string<br>    subnet_id            = optional(string)<br>    public_ip_address_id = optional(string)<br>    public_ip_prefix_id  = optional(string)<br>    rules = optional(list(object({<br>      name               = string<br>      protocol           = string<br>      frontend_port      = number<br>      backend_port       = number<br>      load_distribution  = optional(string, "Default")<br>      enable_floating_ip = optional(bool, false)<br>    })), [])<br>  }))</pre> | `[]` | no |
+| <a name="input_lb_frontend_ip_configurations"></a> [lb\_frontend\_ip\_configurations](#input\_lb\_frontend\_ip\_configurations) | List of object with configuration parameters to create Load Balancer frontend ip configurations and rules | <pre>list(object({<br/>    name                 = string<br/>    subnet_id            = optional(string)<br/>    public_ip_address_id = optional(string)<br/>    public_ip_prefix_id  = optional(string)<br/>    rules = optional(list(object({<br/>      name               = string<br/>      protocol           = string<br/>      frontend_port      = number<br/>      backend_port       = number<br/>      load_distribution  = optional(string, "Default")<br/>      enable_floating_ip = optional(bool, false)<br/>    })), [])<br/>  }))</pre> | `[]` | no |
 | <a name="input_load_balancer_name"></a> [load\_balancer\_name](#input\_load\_balancer\_name) | Specifies the name of the Load Balancer. Changing this forces a new resource to be created. | `string` | n/a | yes |
 | <a name="input_location"></a> [location](#input\_location) | The Azure Region in which all resources in this example should be created. | `string` | n/a | yes |
 | <a name="input_resource_group"></a> [resource\_group](#input\_resource\_group) | The name of the resource group. | `string` | n/a | yes |
