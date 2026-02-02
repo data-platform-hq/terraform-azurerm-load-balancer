@@ -1,3 +1,10 @@
+# [1.2.0](https://github.com/data-platform-hq/terraform-azurerm-load-balancer/compare/v1.1.0...v1.2.0) (2026-02-02)
+
+
+### Features
+
+* upgrade provider to AzureRM v4.0 ([0aa3d55](https://github.com/data-platform-hq/terraform-azurerm-load-balancer/commit/0aa3d552af0c65a9d78ee86a493499af715519d7))
+
 # [1.1.0](https://github.com/data-platform-hq/terraform-azurerm-load-balancer/compare/v1.0.1...v1.1.0) (2024-09-13)
 
 
